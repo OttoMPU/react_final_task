@@ -16,6 +16,11 @@ export default function Customerlist(){
         getCustomers();
     }, [])
 
+    const columnstyle = {
+        marginLeft: "11%",
+        textAlign: "center"
+    }
+
     const getCustomers = () => {
         fetch('https://customerrest.herokuapp.com/api/customers')
         .then(response => response.json())
@@ -114,8 +119,8 @@ export default function Customerlist(){
 
    return(
     <div>
-        <Addcustomer addCustomer={addCustomer}/>
-        <ReactTable defaultPageSize={10} filterable={true} data={customers} columns={customercolumns} />
+        <Addcustomer addCustomer={addCustomer} />
+        <ReactTable defaultPageSize={10} filterable={true} data={customers} columns={customercolumns} style={columnstyle} />
         <Snackbar
             open={open}
             autoHideDuration={3000}

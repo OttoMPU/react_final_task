@@ -22,7 +22,7 @@ import Trainingslist from './components/Trainingslist'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import clsx from 'clsx';
 
- 
+
 
 function App() {
 
